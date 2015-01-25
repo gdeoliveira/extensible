@@ -1,0 +1,10 @@
+Metrics/LineLength:
+  Max: 120
+Style/AndOr:
+  EnforcedStyle: conditionals
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+Style/SpaceInsideBlockBraces:
+  SpaceBeforeBlockParameters: false
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

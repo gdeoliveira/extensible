@@ -1,3 +1,12 @@
 language: ruby
 rvm:
-  - 2.2.0
+- ruby-head
+- 2.2
+- 2.1
+- 2.0
+- 1.9.3
+- 1.9.2
+- jruby-head
+- jruby-1.7
+- rbx
+bundler_args: "--without development"
