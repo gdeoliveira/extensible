@@ -27,7 +27,7 @@ describe Extensible do
           include Extensible
           extend Extensible
           when_extended do |sm|
-            sm.const_set :EBE_2_CALLED, true
+            sm.const_set(:EBE_2_CALLED, true)
           end
         end
       end
@@ -46,7 +46,7 @@ describe Extensible do
         m.module_eval do
           extend ese
           when_extended do |sm|
-            sm.const_set :BE_1_CALLED, true
+            sm.const_set(:BE_1_CALLED, true)
           end
         end
       end
@@ -58,7 +58,7 @@ describe Extensible do
         m.module_eval do
           extend ebe_1
           when_extended do |sm|
-            sm.const_set :BE_2_CALLED, true
+            sm.const_set(:BE_2_CALLED, true)
           end
         end
       end

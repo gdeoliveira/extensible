@@ -18,12 +18,12 @@ module Extensible # rubocop:disable Style/Documentation
   #
   # Returns self object.
   def when_extended(&b)
-    fail ArgumentError, Error::BLOCK_NOT_GIVEN unless block_given?
+    fail(ArgumentError, Error::BLOCK_NOT_GIVEN) unless block_given?
 
     self::ExtensionKernel.module_eval do
       define_method :extended do |submodule|
-        super(submodule)
-        b.call(submodule)
+        super submodule
+        b.call submodule
         self
       end
 

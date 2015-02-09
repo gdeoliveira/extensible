@@ -21,7 +21,7 @@ module Extensible
         this_kernel = self
 
         define_method :included do |submodule|
-          super(submodule)
+          super submodule
           submodule.extend this_kernel
           self
         end
