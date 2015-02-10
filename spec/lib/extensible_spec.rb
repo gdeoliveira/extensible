@@ -17,7 +17,9 @@ describe Extensible do
   context "hierarchy" do
     let(:extensible_base_extension_1) do
       Module.new.tap do |m|
-        m.include described_class
+        m.module_eval do
+          include Extensible
+        end
       end
     end
 
@@ -34,9 +36,13 @@ describe Extensible do
     end
 
     let(:extensible_sub_extension) do
+      ebe_1 = extensible_base_extension_1
+      ebe_2 = extensible_base_extension_2
       Module.new.tap do |m|
-        m.include extensible_base_extension_1
-        m.include extensible_base_extension_2
+        m.module_eval do
+          include ebe_1
+          include ebe_2
+        end
       end
     end
 
@@ -65,15 +71,22 @@ describe Extensible do
     end
 
     let(:sub_extension) do
+      be_1 = base_extension_1
+      be_2 = base_extension_2
       Module.new.tap do |m|
-        m.include base_extension_1
-        m.include base_extension_2
+        m.module_eval do
+          include be_1
+          include be_2
+        end
       end
     end
 
     subject do
+      se = sub_extension
       Class.new.tap do |c|
-        c.extend sub_extension
+        c.class_eval do
+          extend se
+        end
       end
     end
 
