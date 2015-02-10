@@ -8,8 +8,15 @@ Gem::Specification.new do |spec|
   spec.version = Extensible::VERSION
   spec.authors = ["Gabriel de Oliveira"]
   spec.email = ["deoliveira.gab@gmail.com"]
-  spec.summary = "Create extensible extensions."
-  spec.description = "Create extensible extensions."
+  spec.summary = "Ruby extensions made easy."
+  spec.description = "Use Extensible on your custom extensions in order to get the following set of advantages over" \
+                     "traditional extensions that override the `Module#extended` method directly:\n\n" \
+                     "- Calls to `super` are handled internally to ensure all your _extensible_ extensions are" \
+                     "properly initialized.\n" \
+                     "- Your _extensible_ extensions will be automatically able to become the base of other, more" \
+                     "specific extensions while proper initialization is maintained by simply including them.\n" \
+                     "- Bundle several _extensible_ extensions in a single module by including them and they will all" \
+                     "be correctly initialized when extending the bundler module."
   spec.homepage = "https://github.com/gdeoliveira/extensible"
   spec.license = "MIT"
   spec.files = `git ls-files -z`.split("\x0")
