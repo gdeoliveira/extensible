@@ -1,0 +1,32 @@
+version: "2"
+services:
+  cli:
+    extends:
+      service: img
+    extra_hosts:
+      - docker_host:172.17.0.1
+    volumes:
+      - ./:/opt/app/
+  coverage:
+    command: ["bundle", "exec", "rake", "coverage:server"]
+    extends:
+      service: img
+    ports:
+      - 3000:3000
+    volumes:
+      - coverage:/opt/app/coverage/
+  guard:
+    command: ["bundle", "exec", "guard", "-i"]
+    extends:
+      service: cli
+  img:
+    build: ./
+    image: extensible
+  test:
+    command: ["bundle", "exec", "rake", "coverage"]
+    extends:
+      service: cli
+    volumes:
+      - coverage:/opt/app/coverage/
+volumes:
+  coverage:
