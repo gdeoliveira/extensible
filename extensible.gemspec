@@ -33,6 +33,7 @@ the Module#extended method directly.
   spec.add_development_dependency "io-console".freeze
   spec.add_development_dependency "pry-byebug".freeze
   spec.add_development_dependency "rake".freeze
+  spec.add_development_dependency "rdoc".freeze
   spec.add_development_dependency "ruby_gntp".freeze
   spec.add_development_dependency "simplecov".freeze
 end
