@@ -1,4 +1,6 @@
-require "spec_helper"
+# frozen_string_literal: true
+
+require "extensible"
 
 describe Extensible do
   context "#when_extended" do
@@ -109,13 +111,15 @@ describe Extensible do
     end
 
     it "adds the `extensible_base_extension_2` extension kernel to modules that include it" do
-      expect(extension_ids(extensible_base_extension_2)).to include(extensible_base_extension_2::ExtensionKernel.object_id)
+      expect(extension_ids(extensible_base_extension_2)).to \
+        include(extensible_base_extension_2::ExtensionKernel.object_id)
       expect(extension_ids(extensible_sub_extension)).to include(extensible_base_extension_2::ExtensionKernel.object_id)
     end
 
     it "does not add the `extensible_base_extension_2` extension kernel to modules that do not include it" do
       expect(extension_ids(Extensible)).not_to include(extensible_base_extension_2::ExtensionKernel.object_id)
-      expect(extension_ids(extensible_base_extension_1)).not_to include(extensible_base_extension_2::ExtensionKernel.object_id)
+      expect(extension_ids(extensible_base_extension_1)).not_to \
+        include(extensible_base_extension_2::ExtensionKernel.object_id)
       expect(extension_ids(base_extension_1)).not_to include(extensible_base_extension_2::ExtensionKernel.object_id)
       expect(extension_ids(base_extension_2)).not_to include(extensible_base_extension_2::ExtensionKernel.object_id)
       expect(extension_ids(sub_extension)).not_to include(extensible_base_extension_2::ExtensionKernel.object_id)

@@ -17,13 +17,13 @@ module Extensible # rubocop:disable Style/Documentation
   # internally by Extensible.
   #
   # Returns self (this module).
-  def when_extended(&block)
-    fail(ArgumentError, Error::BLOCK_NOT_GIVEN) unless block_given?
+  def when_extended
+    raise(ArgumentError, Error::BLOCK_NOT_GIVEN) unless block_given?
 
     self::ExtensionKernel.module_eval do
       define_method :extended do |submodule|
         super submodule
-        block.call submodule
+        yield submodule
         self
       end
 

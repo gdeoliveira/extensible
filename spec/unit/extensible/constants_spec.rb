@@ -1,4 +1,6 @@
-require "spec_helper"
+# frozen_string_literal: true
+
+require "extensible/constants"
 
 describe Extensible::Error do
   subject { described_class.constants.map {|c| described_class.const_get c } }

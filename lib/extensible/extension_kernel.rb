@@ -1,10 +1,10 @@
 require "extensible/extension_kernel_template"
 
-module Extensible # rubocop:disable Style/Documentation
+module Extensible
   ##
   # A custom ExtensionKernelTemplate clone that is extended by Extensible to make it, well, extensible.
   ExtensionKernel = ExtensionKernelTemplate.clone.module_eval do
-    private # rubocop:disable Style/EmptyLinesAroundAccessModifier
+    private
 
     def extended(submodule)
       super

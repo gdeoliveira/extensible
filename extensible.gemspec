@@ -13,14 +13,14 @@ Gem::Specification.new do |spec|
     "lib/**/*.rb".freeze
   ].freeze
   spec.name = "extensible".freeze
-  spec.summary = "Ruby extensions made easy."
+  spec.summary = "Ruby extensions made easy.".freeze
   spec.version = Extensible::VERSION
 
   spec.email = "deoliveira.gab@gmail.com".freeze
   spec.homepage = "https://github.com/gdeoliveira/extensible".freeze
   spec.license = "MIT".freeze
 
-  spec.description = <<-EOS
+  spec.description = <<-EOS.freeze
 Use Extensible on your custom extensions in order to get a set of advantages over traditional extensions that override
 the Module#extended method directly.
   EOS
