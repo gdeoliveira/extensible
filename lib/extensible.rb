@@ -1,4 +1,3 @@
-require "extensible/constants"
 require "extensible/extension_kernel"
 require "extensible/version"
 
@@ -18,7 +17,7 @@ module Extensible # rubocop:disable Style/Documentation
   #
   # Returns self (this module).
   def when_extended
-    raise(ArgumentError, Error::BLOCK_NOT_GIVEN) unless block_given?
+    raise LocalJumpError, "no block given".freeze unless block_given?
 
     self::ExtensionKernel.module_eval do
       define_method :extended do |submodule|

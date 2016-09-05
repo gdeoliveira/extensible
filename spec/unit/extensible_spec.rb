@@ -12,7 +12,7 @@ describe Extensible do
           extend Extensible
           when_extended
         end
-      end.to raise_error(ArgumentError)
+      end.to raise_error(LocalJumpError)
     end
   end
 
