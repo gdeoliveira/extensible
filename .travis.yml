@@ -1,3 +1,8 @@
+addons:
+  code_climate:
+    repo_token:
+      secure: E3bOUINqN9inAqw0EsziZGyTzwThdrVrPuiRN6LQYIc7tHWkJBY0UO+tNvpj0tQcF3ViBy8Lbi26W2Fy+y0FWR163AXxQ8wu6Tu21es+sIPUxxnr/WFbVc7CEsE68ExsfNUciHHa82xnHECYaSqpR7gLHeMW7wFksdQvcnNMr38=
+gemfile: gemfiles/travis.rb
 language: ruby
 rvm:
 - ruby-head
@@ -9,8 +14,3 @@ rvm:
 - jruby-head
 - jruby-1.7
 - rbx
-bundler_args: "--without development"
-addons:
-  code_climate:
-    repo_token:
-      secure: E3bOUINqN9inAqw0EsziZGyTzwThdrVrPuiRN6LQYIc7tHWkJBY0UO+tNvpj0tQcF3ViBy8Lbi26W2Fy+y0FWR163AXxQ8wu6Tu21es+sIPUxxnr/WFbVc7CEsE68ExsfNUciHHa82xnHECYaSqpR7gLHeMW7wFksdQvcnNMr38=
