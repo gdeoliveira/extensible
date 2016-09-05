@@ -8,6 +8,8 @@ AllCops:
     - "tasks/*.rake"
 Metrics/LineLength:
   Max: 120
+Style/HashSyntax:
+  EnforcedStyle: hash_rockets
 Style/SpaceInsideBlockBraces:
   SpaceBeforeBlockParameters: false
 Style/StringLiterals:
