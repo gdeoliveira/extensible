@@ -1,6 +1,6 @@
 source "https://rubygems.org".freeze
 
-gem "codeclimate-test-reporter".freeze
+gem "codeclimate-test-reporter".freeze if RUBY_VERSION >= "1.9".freeze
 gem "json".freeze, "~> 1.8.3".freeze
 gem "rake".freeze, "~> 10.5.0".freeze
 gem "rspec".freeze
