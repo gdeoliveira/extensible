@@ -17,7 +17,6 @@ rvm:
 - jruby-head
 - jruby-9
 - jruby-1.7
-- mruby-head
-- mruby-1
+- mruby
 - rbx-2
 - ree-1
