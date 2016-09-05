@@ -2,7 +2,7 @@ addons:
   code_climate:
     repo_token:
       secure: E3bOUINqN9inAqw0EsziZGyTzwThdrVrPuiRN6LQYIc7tHWkJBY0UO+tNvpj0tQcF3ViBy8Lbi26W2Fy+y0FWR163AXxQ8wu6Tu21es+sIPUxxnr/WFbVc7CEsE68ExsfNUciHHa82xnHECYaSqpR7gLHeMW7wFksdQvcnNMr38=
-before_install: rm coverage
+before_install: rm coverage && mkdir coverage
 gemfile: gemfiles/travis.rb
 language: ruby
 rvm:
