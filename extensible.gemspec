@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
     "LICENSE.*".freeze,
     "README.*".freeze,
     "lib/**/*.rb".freeze
-  ].freeze
+  ]
   spec.name = "extensible".freeze
   spec.summary = "Ruby extensions made easy.".freeze
   spec.version = Extensible::VERSION
@@ -24,6 +24,13 @@ Gem::Specification.new do |spec|
 Use Extensible on your custom extensions in order to get a set of advantages over traditional extensions that override
 the Module#extended method directly.
   EOS
+  spec.rdoc_options = [
+    "--main=README.md".freeze,
+    "--title=Extensible".freeze,
+    "LICENSE.txt".freeze,
+    "README.md".freeze,
+    "lib/".freeze
+  ].freeze
   spec.required_ruby_version = ">= 1.9".freeze
 
   spec.add_development_dependency "bundler".freeze

@@ -23,6 +23,7 @@ COPY . .
 RUN set -euvxo pipefail\
  && mkdir ../container/\
  && mkdir ../container/coverage/\
+ && mkdir ../container/doc/\
  && mkdir ../container/pkg/\
  && mkdir ../container/tmp/\
  && bundle install --clean --no-cache --system\

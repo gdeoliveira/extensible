@@ -47,7 +47,8 @@ module or a class **and** that extension needs to have some initialization code.
 
 In short: if you are going to override `Module#extended`, use Extensible instead.
 
-## <a name="usage"></a>Usage
+<a name="usage"></a>
+## Usage
 
 #### Basic
 

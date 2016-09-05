@@ -15,6 +15,14 @@ services:
       - 3000:3000
     volumes:
       - coverage:/opt/app/coverage/
+  document:
+    command: ["bundle", "exec", "rake", "rdoc:server"]
+    extends:
+      service: img
+    ports:
+      - 3001:3001
+    volumes:
+      - document:/opt/app/doc/
   guard:
     command: ["bundle", "exec", "guard", "-i"]
     extends:
@@ -22,6 +30,12 @@ services:
   img:
     build: ./
     image: extensible
+  rdoc:
+    command: ["bundle", "exec", "rake", "rdoc"]
+    extends:
+      service: cli
+    volumes:
+      - document:/opt/app/doc/
   test:
     command: ["bundle", "exec", "rake", "coverage"]
     extends:
@@ -30,3 +44,4 @@ services:
       - coverage:/opt/app/coverage/
 volumes:
   coverage:
+  document:
