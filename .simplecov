@@ -6,5 +6,5 @@ SimpleCov.start do
   formatter SimpleCov::Formatter::MultiFormatter.new([SimpleCov::Formatter::HTMLFormatter,
                                                       CodeClimate::TestReporter::Formatter])
 
-  add_filter {|file| file.filename !~ %r{\A/opt/app/lib/} }
+  add_filter "/spec/"
 end
