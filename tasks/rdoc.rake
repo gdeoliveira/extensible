@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "rdoc/rdoc"
-require_relative "rdoc/server"
+require "rdoc/server"
 
 RDOC_OPTIONS = %w(--all --force-output) | Bundler::GemHelper.gemspec.rdoc_options
 

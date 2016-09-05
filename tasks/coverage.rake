@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "coverage/server"
+require "coverage/server"
 
 desc "Run RSpec code examples and generate a coverage report"
 task :coverage do
