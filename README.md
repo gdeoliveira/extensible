@@ -1,16 +1,14 @@
 # Extensible
 
 [![Gem Version](http://img.shields.io/gem/v/extensible.svg)][gem]
-[![Build Status](http://img.shields.io/travis/gdeoliveira/extensible.svg)][travis]
+[![Build Status](http://img.shields.io/travis/gdeoliveira/extensible/master.svg)][travis]
 [![Code Climate](http://img.shields.io/codeclimate/github/gdeoliveira/extensible.svg)][codeclimate]
 [![Test Coverage](http://img.shields.io/codeclimate/coverage/github/gdeoliveira/extensible.svg)][codeclimate]
-[![Dependency Status](http://img.shields.io/gemnasium/gdeoliveira/extensible.svg)][gemnasium]
 [![Inline docs](http://inch-ci.org/github/gdeoliveira/extensible.svg?branch=master)][inch-ci]
 
 [gem]: https://rubygems.org/gems/extensible
-[travis]: http://travis-ci.org/gdeoliveira/extensible
+[travis]: http://travis-ci.org/gdeoliveira/extensible/branches
 [codeclimate]: https://codeclimate.com/github/gdeoliveira/extensible
-[gemnasium]: https://gemnasium.com/gdeoliveira/extensible#development-dependencies
 [inch-ci]: http://inch-ci.org/github/gdeoliveira/extensible
 
 Use Extensible on your custom extensions in order to get the following set of advantages over traditional extensions
