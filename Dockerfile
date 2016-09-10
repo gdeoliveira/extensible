@@ -8,6 +8,7 @@ RUN set -euvxo pipefail\
   git\
   libffi-dev\
   make\
+  openssh-client\
   ruby-dev\
   ruby-irb\
  && gem update --clear-sources --no-document --system\
