@@ -1,4 +1,4 @@
-require "extensible/extension_kernel_template"
+require "extensible/extension_kernel_template".freeze
 
 module Extensible
   ##

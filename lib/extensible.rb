@@ -1,5 +1,5 @@
-require "extensible/extension_kernel"
-require "extensible/version"
+require "extensible/extension_kernel".freeze
+require "extensible/version".freeze
 
 ##
 # Use Extensible on your custom extensions in order to get a set of advantages over traditional extensions that override
