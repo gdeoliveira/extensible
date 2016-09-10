@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
-CONSOLE_GEM_NAME = Bundler::GemHelper.gemspec.name.dup.freeze
-CONSOLE_GEM_VERSION = Bundler::GemHelper.gemspec.version.dup.freeze
-
-desc "Open Pry console with #{CONSOLE_GEM_NAME}-#{CONSOLE_GEM_VERSION}.gem preloaded"
+desc "Open Pry console with #{Bundler::GemHelper.gemspec.full_name}.gem preloaded"
 task :console do
-  require CONSOLE_GEM_NAME
+  require Bundler::GemHelper.gemspec.name
   require "pry"
   Pry.start
 end

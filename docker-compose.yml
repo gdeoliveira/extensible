@@ -36,6 +36,17 @@ services:
       service: cli
     volumes:
       - document:/opt/app/doc/
+  release:
+    command: ["bundle", "exec", "rake", "release:safe"]
+    environment:
+      - GIT_AUTHOR_NAME=Gabriel de Oliveira
+      - GIT_AUTHOR_EMAIL=deoliveira.gab@gmail.com
+      - GIT_COMMITTER_NAME=Gabriel de Oliveira
+      - GIT_COMMITTER_EMAIL=deoliveira.gab@gmail.com
+    extends:
+      service: cli
+    volumes:
+      - ~/.ssh/:/root/.ssh/
   test:
     command: ["bundle", "exec", "rake", "coverage"]
     extends:

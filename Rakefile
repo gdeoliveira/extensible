@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 require "bundler/gem_tasks"
-require "rspec/core/rake_task"
-
-RSpec::Core::RakeTask.new(:spec)
 
 tasks = File.expand_path("../tasks/", __FILE__)
 $LOAD_PATH.push(tasks) unless $LOAD_PATH.include?(tasks)
