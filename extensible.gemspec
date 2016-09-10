@@ -33,14 +33,14 @@ the Module#extended method directly.
   ].freeze
   spec.required_ruby_version = ">= 1.9".freeze
 
-  spec.add_development_dependency "bundler".freeze
-  spec.add_development_dependency "codeclimate-test-reporter".freeze
-  spec.add_development_dependency "guard-rspec".freeze
-  spec.add_development_dependency "guard-rubocop".freeze
-  spec.add_development_dependency "io-console".freeze
-  spec.add_development_dependency "pry-byebug".freeze
-  spec.add_development_dependency "rake".freeze
-  spec.add_development_dependency "rdoc".freeze
-  spec.add_development_dependency "ruby_gntp".freeze
-  spec.add_development_dependency "simplecov".freeze
+  spec.add_development_dependency "bundler".freeze, "~> 1.13.0".freeze
+  spec.add_development_dependency "codeclimate-test-reporter".freeze, "~> 0.6.0".freeze
+  spec.add_development_dependency "guard-rspec".freeze, "~> 4.7.3".freeze
+  spec.add_development_dependency "guard-rubocop".freeze, "~> 1.2.0".freeze
+  spec.add_development_dependency "io-console".freeze, "~> 0.4.6".freeze
+  spec.add_development_dependency "pry-byebug".freeze, "~> 3.4.0".freeze
+  spec.add_development_dependency "rake".freeze, "~> 11.2.2".freeze
+  spec.add_development_dependency "rdoc".freeze, "~> 4.2.2".freeze
+  spec.add_development_dependency "ruby_gntp".freeze, "~> 0.3.4".freeze
+  spec.add_development_dependency "simplecov".freeze, "~> 0.12.0".freeze
 end
