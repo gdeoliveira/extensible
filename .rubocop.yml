@@ -12,3 +12,5 @@ Style/SpaceInsideBlockBraces:
   SpaceBeforeBlockParameters: false
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+Style/VariableNumber:
+  EnforcedStyle: snake_case
