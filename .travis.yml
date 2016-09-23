@@ -6,6 +6,9 @@ before_install: rm coverage
 gemfile: gemfiles/travis.rb
 language: ruby
 matrix:
+  include:
+    - rvm: 1.9.3
+      gemfile: gemfiles/travis_1.9.3.rb
   allow_failures:
     - rvm: jruby-head
     - rvm: mruby-head
