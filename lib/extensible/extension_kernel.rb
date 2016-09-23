@@ -9,7 +9,7 @@ module Extensible
     def extended(submodule)
       super
 
-      unless submodule.const_defined?(:ExtensionKernel, false)
+      unless own_const_defined?(submodule, :ExtensionKernel)
         kernel = ExtensionKernelTemplate.clone
         submodule.const_set(:ExtensionKernel, kernel)
         submodule.extend kernel
