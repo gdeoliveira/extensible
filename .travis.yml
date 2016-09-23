@@ -14,7 +14,7 @@ matrix:
     - rvm: 1.9.3
       gemfile: gemfiles/travis_1.9.3.rb
     - rvm: ree
-    - gemfile: gemfiles/travis_1.8.7.rb
+      gemfile: gemfiles/travis_1.8.7.rb
   allow_failures:
     - rvm: jruby-head
     - rvm: mruby-head
