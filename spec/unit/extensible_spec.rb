@@ -93,7 +93,9 @@ describe Extensible do
     end
 
     def extension_ids(mod)
-      mod.singleton_class.ancestors.map(&:object_id)
+      class << mod
+        self
+      end.ancestors.map(&:object_id)
     end
 
     it "adds the extensible extension kernel to all extensible extensions" do
