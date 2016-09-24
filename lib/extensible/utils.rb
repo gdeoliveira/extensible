@@ -4,8 +4,6 @@ module Extensible
   module Utils
     class << self
       if RUBY_VERSION >= "1.9".freeze
-        # :nocov:
-
         ##
         # call-seq:
         #   own_const_defined?(mod, const_name) => true or false
@@ -15,11 +13,12 @@ module Extensible
         def own_const_defined?(mod, const_name)
           mod.const_defined?(const_name, false)
         end
-        # :nocov:
       else
+        # :nocov:
         def own_const_defined?(mod, const_name)
           mod.const_defined?(const_name)
         end
+        # :nocov:
       end
     end
   end
