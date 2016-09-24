@@ -1,4 +1,5 @@
 require "extensible/extension_kernel_template".freeze
+require "extensible/utils".freeze
 
 module Extensible
   ##
@@ -9,7 +10,7 @@ module Extensible
     def extended(submodule)
       super
 
-      unless own_const_defined?(submodule, :ExtensionKernel)
+      unless Utils.own_const_defined?(submodule, :ExtensionKernel)
         kernel = ExtensionKernelTemplate.clone
         submodule.const_set(:ExtensionKernel, kernel)
         submodule.extend kernel

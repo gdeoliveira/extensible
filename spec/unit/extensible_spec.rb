@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "support/matchers/have_own_constant_defined"
 require "extensible"
 
 describe Extensible do
@@ -157,45 +158,45 @@ describe Extensible do
     end
 
     it "executes the `extensible_base_extension_2` extension code on modules that extend it" do
-      expect(base_extension_1.const_defined?(:EBE_2_CALLED, false)).to be(true)
+      expect(base_extension_1).to have_own_constant_defined(:EBE_2_CALLED)
     end
 
     it "does not execute `extensible_base_extension_2` extension code on modules that do not extend it" do
-      expect(Extensible.const_defined?(:EBE_2_CALLED, false)).to be(false)
-      expect(extensible_base_extension_1.const_defined?(:EBE_2_CALLED, false)).to be(false)
-      expect(extensible_base_extension_2.const_defined?(:EBE_2_CALLED, false)).to be(false)
-      expect(extensible_sub_extension.const_defined?(:EBE_2_CALLED, false)).to be(false)
-      expect(base_extension_2.const_defined?(:EBE_2_CALLED, false)).to be(false)
-      expect(sub_extension.const_defined?(:EBE_2_CALLED, false)).to be(false)
-      expect(subject.const_defined?(:EBE_2_CALLED, false)).to be(false)
+      expect(Extensible).not_to have_own_constant_defined(:EBE_2_CALLED)
+      expect(extensible_base_extension_1).not_to have_own_constant_defined(:EBE_2_CALLED)
+      expect(extensible_base_extension_2).not_to have_own_constant_defined(:EBE_2_CALLED)
+      expect(extensible_sub_extension).not_to have_own_constant_defined(:EBE_2_CALLED)
+      expect(base_extension_2).not_to have_own_constant_defined(:EBE_2_CALLED)
+      expect(sub_extension).not_to have_own_constant_defined(:EBE_2_CALLED)
+      expect(subject).not_to have_own_constant_defined(:EBE_2_CALLED)
     end
 
     it "executes the `base_extension_1` extension code on modules that extend it" do
-      expect(subject.const_defined?(:BE_1_CALLED, false)).to be(true)
+      expect(subject).to have_own_constant_defined(:BE_1_CALLED)
     end
 
     it "does not execute `base_extension_1` extension code on modules that do not extend it" do
-      expect(Extensible.const_defined?(:BE_1_CALLED, false)).to be(false)
-      expect(extensible_base_extension_1.const_defined?(:BE_1_CALLED, false)).to be(false)
-      expect(extensible_base_extension_2.const_defined?(:BE_1_CALLED, false)).to be(false)
-      expect(extensible_sub_extension.const_defined?(:BE_1_CALLED, false)).to be(false)
-      expect(base_extension_1.const_defined?(:BE_1_CALLED, false)).to be(false)
-      expect(base_extension_2.const_defined?(:BE_1_CALLED, false)).to be(false)
-      expect(sub_extension.const_defined?(:BE_1_CALLED, false)).to be(false)
+      expect(Extensible).not_to have_own_constant_defined(:BE_1_CALLED)
+      expect(extensible_base_extension_1).not_to have_own_constant_defined(:BE_1_CALLED)
+      expect(extensible_base_extension_2).not_to have_own_constant_defined(:BE_1_CALLED)
+      expect(extensible_sub_extension).not_to have_own_constant_defined(:BE_1_CALLED)
+      expect(base_extension_1).not_to have_own_constant_defined(:BE_1_CALLED)
+      expect(base_extension_2).not_to have_own_constant_defined(:BE_1_CALLED)
+      expect(sub_extension).not_to have_own_constant_defined(:BE_1_CALLED)
     end
 
     it "executes the `base_extension_2` extension code on modules that extend it" do
-      expect(subject.const_defined?(:BE_2_CALLED, false)).to be(true)
+      expect(subject).to have_own_constant_defined(:BE_2_CALLED)
     end
 
     it "does not execute `base_extension_2` extension code on modules that do not extend it" do
-      expect(Extensible.const_defined?(:BE_2_CALLED, false)).to be(false)
-      expect(extensible_base_extension_1.const_defined?(:BE_2_CALLED, false)).to be(false)
-      expect(extensible_base_extension_2.const_defined?(:BE_2_CALLED, false)).to be(false)
-      expect(extensible_sub_extension.const_defined?(:BE_2_CALLED, false)).to be(false)
-      expect(base_extension_1.const_defined?(:BE_2_CALLED, false)).to be(false)
-      expect(base_extension_2.const_defined?(:BE_2_CALLED, false)).to be(false)
-      expect(sub_extension.const_defined?(:BE_2_CALLED, false)).to be(false)
+      expect(Extensible).not_to have_own_constant_defined(:BE_2_CALLED)
+      expect(extensible_base_extension_1).not_to have_own_constant_defined(:BE_2_CALLED)
+      expect(extensible_base_extension_2).not_to have_own_constant_defined(:BE_2_CALLED)
+      expect(extensible_sub_extension).not_to have_own_constant_defined(:BE_2_CALLED)
+      expect(base_extension_1).not_to have_own_constant_defined(:BE_2_CALLED)
+      expect(base_extension_2).not_to have_own_constant_defined(:BE_2_CALLED)
+      expect(sub_extension).not_to have_own_constant_defined(:BE_2_CALLED)
     end
   end
 end
