@@ -31,7 +31,6 @@ the Module#extended method directly.
     "README.md".freeze,
     "lib/".freeze
   ].freeze
-  spec.required_ruby_version = ">= 1.9".freeze
 
   spec.add_development_dependency "bundler".freeze, "~> 1.13.1".freeze
   spec.add_development_dependency "codeclimate-test-reporter".freeze, "~> 0.6.0".freeze
