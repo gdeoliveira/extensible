@@ -31,3 +31,4 @@ RUN set -euvxo pipefail\
  && bundle clean --force
 
 CMD ["/bin/ash"]
+ENTRYPOINT ["docker/entrypoint.sh"]

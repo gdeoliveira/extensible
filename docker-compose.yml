@@ -3,8 +3,6 @@ services:
   cli:
     extends:
       service: img
-    extra_hosts:
-      - docker_host:172.17.0.1
     volumes:
       - ./:/opt/app/
   coverage:

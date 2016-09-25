@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-notification :gntp, :host => "docker_host"
+notification :gntp, :host => "dockerhost"
 
 guard :rubocop do
   watch(%r{\A(?:\.simplecov|(?:Gem|Rake)file|\w+\.gemspec|tasks/\w+\.rake|.+\.rb)\z})
