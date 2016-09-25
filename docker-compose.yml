@@ -14,7 +14,7 @@ services:
     volumes:
       - coverage:/opt/app/coverage/
   document:
-    command: ["bundle", "exec", "rake", "rdoc:server"]
+    command: ["bundle", "exec", "rake", "rdoc:server[3001]"]
     extends:
       service: img
     ports:
