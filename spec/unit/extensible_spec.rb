@@ -4,6 +4,22 @@ require "support/matchers/have_own_constant_defined"
 require "extensible"
 
 describe Extensible do
+  # rubocop:disable Style/EmptyLiteral
+  [123, :symbol, Array.new, Hash.new, Class.new, Object.new, Set.new, String.new].each do |object|
+    # rubocop:enable Style/EmptyLiteral
+    context "when extending an object of type `#{object.class}`" do
+      it "raises an exception" do
+        expect { object.extend(described_class) }.to raise_error(TypeError)
+      end
+    end
+  end
+
+  context "when extending an object of type `Module`" do
+    it "does not raise an exception" do
+      expect { Module.new.extend(described_class) }.not_to raise_error
+    end
+  end
+
   context "#when_extended" do
     it "raises an error if code block is not provided" do
       m = Module.new

@@ -8,6 +8,8 @@ module Extensible
     private
 
     def extended(submodule)
+      raise_type_error_if_submodule_is_not_a_module(submodule)
+
       super
 
       unless Utils.own_const_defined?(submodule, :ExtensionKernel)
@@ -17,6 +19,12 @@ module Extensible
       end
 
       self
+    end
+
+    def raise_type_error_if_submodule_is_not_a_module(submodule)
+      return if submodule.class == Module
+      raise TypeError, "expected to extend object of type `Module` with module `#{name}`, got `#{submodule.class}` " \
+                       "instead"
     end
 
     self
